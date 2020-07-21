@@ -12,7 +12,6 @@ Then("a API deverá retornar o código do IBGE do endereço") do
     #log "response body: #{$response.body}"
     cepFromAPI = "#{$response['cep']}"
     if cepFromAPI == $cep
-        #log "IGUAL"
         log "Código IBGE do CEP buscado: #{$response['ibge']}"
     end
 end
@@ -21,7 +20,6 @@ Then('deverá mostrar a mensagem que o CEP nao existe') do
     #log "response body: #{$response.body}"
     cepFromAPI = "#{$response['cep']}"
     if cepFromAPI != $cep
-        #log "IGUAL"
         log "O CEP buscado é inválido."
     end
 end
