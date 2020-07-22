@@ -1,9 +1,9 @@
 Given("uma base de dados") do
     $uri_base = "https://viacep.com.br/ws/01001000/json/"
-    log "Insira um CEP para busca: "
 end
 
 When("realizar uma busca por um cep") do
+    print "Insira um CEP \n"
     $cep = gets.chomp
     $response = HTTParty.get($uri_base, query: {:cep => $cep})
 end
